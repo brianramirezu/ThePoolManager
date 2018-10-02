@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <div className ="header">
       <ul>
-          <a href="#"><span class="icon-earth"></span>Servicios</a>
-          <a href="#"><span class="icon-house"></span>Inicio</a>
-          <a href="#"><span class="icon-suitcase"></span>Trabajos</a>
-          <a href="#"><span class="icon-rocket"></span>Proyectos</a>
-          <a href="#"><span class="icon-mail"></span>Contactos</a>
+        <a href="#"><span className="icon-house"></span>Inicio</a>
+          <a href="#"><span className="icon-earth"></span>Servicios</a>
+          <a href="./Events.jsx"><span className="icon-suitcase"></span>Eventos</a>
+          <a href="#"><span className="icon-rocket"></span>Solicita tu visita</a>
+          <a href="#"><span className="icon-mail"></span>Contactos</a>
         </ul>
       </div>
     )
