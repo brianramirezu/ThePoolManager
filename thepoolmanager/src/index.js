@@ -17,12 +17,9 @@ class Index extends React.Component {
             <Route exact path='/About' component={About} />
             <Route exact path='/Events' component={Events} />
             <Route exact path='/BookAVisit' component={BookAVisit} />
-            <Route exact path='/registerServiceWorker' component={registerServiceWorker} />
          </div>
        </BrowserRouter>
       </div>
-
-
 
 
 
