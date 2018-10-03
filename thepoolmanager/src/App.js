@@ -3,11 +3,7 @@ import Header from "./componets/header.jsx"
 import Calendar from "./componets/calendar.jsx"
 import Events from "./componets/Events.jsx"
 import style from "./style.css"
-
-
-
-
-
+import Home from "./Home.js"
 class App extends Component {
   render() {
     return (
