@@ -3,9 +3,7 @@ import React from "react"
 import ApiCalendar from 'react-google-calendar-api';
 
 
-
-
-  export default class Calendar extends React.Component {
+class Calendar extends React.Component {
       constructor(props) {
         super(props);
         this.handleItemClick = this.handleItemClick.bind(this);
@@ -36,3 +34,5 @@ import ApiCalendar from 'react-google-calendar-api';
           );
       }
   }
+
+export default Calendar;

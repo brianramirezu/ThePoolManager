@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
-import Header from "./componets/header.jsx"
-import Calendar from "./componets/calendar.jsx"
-import Events from "./componets/Events.jsx"
 import style from "./style.css"
-
-
-
+import Header from "./componets/header.jsx"
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Home from "./home.jsx"
+import Events from "./componets/Events.jsx"
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
+      <div>
         <Header />
-        <p>This is the landing page</p>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/eventos" component={Events} />
+
+        </Switch>
+
       </div>
+    </BrowserRouter>
     );
   }
 }

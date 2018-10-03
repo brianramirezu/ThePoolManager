@@ -1,16 +1,17 @@
-import React from "react"
-
+import React from "react";
+import Events from "./Events.jsx";
+import {NavLink}  from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className ="header">
       <ul>
-        <a href="#"><span className="icon-house"></span>Inicio</a>
-          <a href="#"><span className="icon-earth"></span>Servicios</a>
-          <a href="./Events.jsx"><span className="icon-suitcase"></span>Eventos</a>
-          <a href="#"><span className="icon-rocket"></span>Solicita tu visita</a>
-          <a href="#"><span className="icon-mail"></span>Contactos</a>
-        </ul>
+      <NavLink to="/">Inicio</NavLink>
+      <NavLink to="/servicios">Servicios</NavLink>
+      <NavLink to="/eventos">Eventos</NavLink>
+      <NavLink to="/visita">Solicita tu visita</NavLink>
+      <NavLink to="/constactos">Contactos</NavLink>
+</ul>
       </div>
     )
   }

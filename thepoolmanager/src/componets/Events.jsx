@@ -1,9 +1,14 @@
 import React from "react"
+import Calendar from "./calendar.jsx"
 
-
-export default class Events extends React.Component {
-    constructor(props) {
-      super(props);
-      this.handleItemClick = this.handleItemClick.bind(this);
-    }
+const Events = () => {
+  return (
+    <div>
+  aqui va el evento del calendar
+  <Calendar />
+   </div>
+  );
 }
+
+
+export default Events;
