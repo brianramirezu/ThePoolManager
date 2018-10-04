@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
-
+import {SocialIcon} from "react-social-icons";
 class FooterPage extends React.Component {
     render(){
         return(
@@ -11,13 +11,8 @@ class FooterPage extends React.Component {
                             <Col md="6" lg="5" className="text-center text-md-left mb-4 mb-md-0">
                                 <h6 className="mb-0 white-text">Get connected with us on social networks!</h6>
                             </Col>
-                            <Col md="6" lg="7" className="text-center text-md-right">
-                                <a className="fb-ic ml-0"><i className="fa fa-facebook white-text mr-lg-4"> </i></a>
-                                <a className="tw-ic"><i className="fa fa-twitter white-text mr-lg-4"> </i></a>
-                                <a className="gplus-ic"><i className="fa fa-google-plus white-text mr-lg-4"> </i></a>
-                                <a className="li-ic"><i className="fa fa-linkedin white-text mr-lg-4"> </i></a>
-                                <a className="ins-ic"><i className="fa fa-instagram white-text mr-lg-4"> </i></a>
-                            </Col>
+                      <SocialIcon url="http://twitter.com/jaketrent"/>
+                      <SocialIcon url="http://www.facebook.com/ThePoolMx/?ref=br_rs"/>
                         </Row>
                     </Container>
                 </div>
