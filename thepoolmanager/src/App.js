@@ -4,7 +4,7 @@ import Header from "./componets/header.jsx"
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from "./home.jsx"
 import Events from "./componets/Events.jsx"
-
+import FooterPage from "./componets/footer.jsx"
 
 class App extends Component {
   render() {
@@ -15,9 +15,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/eventos" component={Events} />
-
         </Switch>
-
+        <FooterPage />
       </div>
     </BrowserRouter>
     );
