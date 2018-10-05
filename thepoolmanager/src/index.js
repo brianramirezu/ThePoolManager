@@ -1,7 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react'
-import {render} from 'react-dom';
-import App from './App.js'
+
+import React from 'react';
+import axios from 'axios'
+import ReactDOM from 'react-dom';
+import App from './App.js';
+
+
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
