@@ -5,13 +5,13 @@ import {NavLink}  from 'react-router-dom';
 const Header = () => {
   return (
     <div className ="header">
-      <ul>
+    <ul>
       <NavLink to="/">Inicio</NavLink>
       <NavLink to="/servicios">Servicios</NavLink>
       <NavLink to="/eventos">Eventos</NavLink>
       <NavLink to="/visita">Solicita tu visita</NavLink>
       <NavLink to="/constactos">Contactos</NavLink>
-</ul>
+    </ul>
       </div>
     )
   }
