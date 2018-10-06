@@ -3,9 +3,12 @@ import Calendar from "./calendar.jsx"
 
 const Events = () => {
   return (
-    <div>
-  aqui va el evento del calendar
+    <div className="calendar">
+
+  <h4>Agrega los eventos:</h4>
+  
   <Calendar />
+
    </div>
   );
 }

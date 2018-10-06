@@ -1,20 +1,8 @@
-/* 
 
-.header {
-  background-color: #A2C5C9;
-  overflow: hidden;
-  text-align:center;
+.calendar {
+  
+  	padding:10px 20px;
+  background: #D0E4F5 url("/frise.png") no-repeat scroll 0 0;
+
 }
-.header ul a {
-      display:inline-block;
-    	color:#fff;
-    	text-decoration:none;
-    	padding:10px 20px;
-    	line-height:normal;
-    	font-size:20px;
-    	font-weight:bold;
-    	-webkit-transition:all 500ms ease;
-    	-o-transition:all 500ms ease;
-    	transition:all 500ms ease;
 
-} */
