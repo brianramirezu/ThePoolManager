@@ -1,7 +1,7 @@
 import React from 'react';
 import { firebaseApp } from '../firebase'
 
-class SignUp extends Component{
+class SignIn extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -13,10 +13,10 @@ class SignUp extends Component{
     }
   }
 
-  signUp() {
+  signIn() {
     console.log('this.state', this.state);
     const {email, password } = this.state;
-    firebaseApp.auth().createUserWithEmailAndPassword(email, password)
+    firebaseApp.auth().signInWithEmailAndPassword(email, password)
       .catch(error => {
         this.setState({error})
       })
@@ -25,7 +25,7 @@ class SignUp extends Component{
   render(){
     return(
       <div callName='form-inline' style={{margin: '5%'}}>
-        <h2>Sign Up</h2>
+        <h2>Sign In</h2>
         <div callName='from-group'>
           <input
             className='form-control'
@@ -44,9 +44,9 @@ class SignUp extends Component{
            <button
              className='btn btn-primary'
              type='button'
-             onClick={() => this.signUp()}
+             onClick={() => this.signIn()}
              >
-             Sign Up
+             Sign In
            </button>
         </div>
         <div>{this.state.error.message}</div>
@@ -55,4 +55,4 @@ class SignUp extends Component{
   }
 }
 
-export default SignUp;
+export default SignIn;
