@@ -5,10 +5,9 @@ import style from "./style.css"
 class Home extends Component {
   render() {
     return (
-
       <div>
-      hello
-  
+      <h1>hello</h1>
+
       </div>
 
     );

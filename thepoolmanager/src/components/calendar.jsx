@@ -1,10 +1,9 @@
 import React from "react"
 
-import ApiCalendar from 'react-google-calendar-api';
-
 import Modal from 'react-responsive-modal';
-class Calendar extends React.Component {
 
+
+class Calendar extends React.Component {
 constructor(props) {
 super(props)
 this.state = {
@@ -15,6 +14,7 @@ this.onCloseModal = this.onCloseModal.bind(this);
 }
 
 onOpenModal() {
+
 this.setState({ open: true });
 }
 
@@ -26,10 +26,10 @@ render() {
 const { open } = this.state;
 
 return (
- <div>
-   <button onClick={this.onOpenModal}>Calendar</button>
+ <div className= "calendar">
+   <button className ="button" onClick={this.onOpenModal}>Calendar</button>
    <Modal open={open} onClose={this.onCloseModal} center>
-     <iframe className='calendar' src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=holacode.com_49297h4c9415iuq3nrnm62sk8g%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"></iframe>
+     <iframe  title="calendar" src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=50&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=holacode.com_49297h4c9415iuq3nrnm62sk8g%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"></iframe>
    </Modal>
  </div>
 )}

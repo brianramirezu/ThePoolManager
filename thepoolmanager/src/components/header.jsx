@@ -1,16 +1,17 @@
 import React from "react";
-import Events from "./Events.jsx";
+import style from "../style.css"
+import Events from "./events.jsx";
 import {NavLink}  from 'react-router-dom';
 import {Navbar, NavItem, NavDropdown, Nav, MenuItem} from 'react-bootstrap';
 
 const HeaderBar = () => {
  return (
-   <div>
+   <div >
 
  <nav className="navbar navbar-inverse">
    <div className="container-fluid">
      <div className="navbar-header">
-       <a className="navbar-brand" href="#">The Pool Manager</a>
+       <a className="navbar-brand" href="#"></a>
      </div>
      <ul className="nav navbar-nav">
        <li className="active"><a href="src/home.jsx">Home</a></li>
