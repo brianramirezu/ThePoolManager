@@ -12,9 +12,9 @@ import 'react-images-uploader/font.css';
         return (
           <div className= "style">
             <ImagesUploader
-                url="nodemysql"
+                url="http://localhost:8000/notmultiple"
                 optimisticPreviews
-                onLoadEnd={(err) => {
+                onLoadEnd={(err,) => {
                     if (err) {
                         console.error(err);
                     }
