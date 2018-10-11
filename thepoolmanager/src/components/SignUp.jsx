@@ -1,8 +1,8 @@
 import React from 'react';
-import { firebaseApp } from '../firebase'
-import { link } from 'react-router';
+import { firebaseApp } from 'firebase'
+import { Link } from 'react-router-dom';
 
-class SignUp extends Component{
+class SignUp extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -25,9 +25,9 @@ class SignUp extends Component{
 
   render(){
     return(
-      <div callName='form-inline' style={{margin: '5%'}}>
+      <div className='form-inline' style={{margin: '5%'}}>
         <h2>Sign Up</h2>
-        <div callName='from-group'>
+        <div className='from-group'>
           <input
             className='form-control'
               type='text'
@@ -51,7 +51,7 @@ class SignUp extends Component{
            </button>
         </div>
         <div>{this.state.error.message}</div>
-        <div><Link to='{/SignIp}'></Link>Already a member? Sign in instead</div>
+        <div><Link to={'/SignIp'}></Link>Already a member? Sign in instead</div>
       </div>
     )
   }

@@ -26,8 +26,8 @@ const HeaderBar = () => {
        <li><NavLink to ="/contacts">Contacts</NavLink></li>
      </ul>
      <ul className="nav navbar-nav navbar-right">
-       <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-       <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><NavLink to ='/'>Sign In</NavLink></li>
+       <li><NavLink to ='/SignUp'>Sign Up</NavLink></li>
      </ul>
    </div>
  </nav>
