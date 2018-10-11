@@ -9,6 +9,7 @@
     "cors-prefetch-middleware": "^1.0.0",
     "express": "^4.16.3",
     "express-fileupload": "^1.0.0-alpha.1",
+    "firebase": "^5.5.3",
     "jquery": "^3.3.1",
     "mdbootstrap": "^4.5.11",
     "mdbreact": "^4.8.0",
