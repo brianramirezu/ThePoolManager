@@ -9,9 +9,23 @@ var connection = mysql.createConnection({
 });
 
  //insert message
-var insertOne= function(name, description, category, comments, email, phone, photo , callback){
-  connection.query('INSERT INTO list (name, description, category, comments, email, phone , photo) VALUES (?,?,?,?,?,?,?)',
-  [name, description, category, comments, email, phone, photo , (err, results)=>{
+// var insertOne= function(name, description, category, comments, email, phone, photo , callback){
+//   connection.query('INSERT INTO events (name, description, category, comments, email, phone , photo) VALUES (?,?,?,?,?,?,?)',
+//   [name, description, category, comments, email, phone, photo , (err, results)=>{
+//     if(err){
+//       console.log("insert error")
+//       callback(err, null)
+//     } else{
+//       console.log(results);
+//       callback(null, results)
+//       console.log('done');
+//     }
+//   }
+// )
+
+var insertOne= function(photo , callback){
+  connection.query('INSERT INTO events (photo) VALUES (?)',
+  [ photo , (err, results)=>{
     if(err){
       console.log("insert error")
       callback(err, null)
@@ -22,6 +36,10 @@ var insertOne= function(name, description, category, comments, email, phone, pho
     }
   }
 )
-}
+
+
+
+
+
 
 module.exports.insertOne = insertOne
