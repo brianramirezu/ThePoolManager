@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import style from "./style.css"
 import HeaderBar from "./components/header.jsx"
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { browserHistory } from 'react-router';
 import Home from "./home.jsx"
 import Events from "./components/events.jsx"
 //import FooterPage from "./footer.jsx"
@@ -12,15 +13,17 @@ import Contacts from "./components/contacts.jsx"
 import FooterPage from "./components/footer.jsx"
 import SignIn from './components/SignIn.jsx'
 import SignUp from './components/SignUp.jsx'
-import { firebaseApp }  from 'firebase';
+import { firebaseApp }  from './firebase';
 
-// firebaseApp.auth().onAuthStateChange(user => {
-//   if (user){
-//     console.log('user has signed in or up', user);
-//   }else{
-//     console.log('user has signed out or still need to sign in');
-//   }
-// })
+firebaseApp.auth().onAuthStateChanged(user => {
+  if (user){
+    console.log('user has signed in or up', user);
+    browserHistory.push('/home');
+  }else{
+    console.log('user has signed out or still need to sign in');
+    browserHistory.replace('/SignIn');
+  }
+})
 class App extends Component {
  render() {
    return (
