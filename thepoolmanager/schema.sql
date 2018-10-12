@@ -13,11 +13,24 @@ CREATE TABLE events(
    comments varchar(50) NOT NULL,
    email varchar(50)NOT NULL,
    phone varchar(10)NOT NULL,
-   photo varchar(100)DEFAULT "default.pjg",
+
   PRIMARY KEY (ID)
 );
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root -p < schema.sql
  *  to create the database and the tables.*/
- INSERT INTO events (name, description, category, comments, email, phone, photo)  VALUES ("Henry", "Hondureño", "man", "student", "tot@hotmail.com", "0000000000", "" );
+ INSERT INTO events (name, description, category, comments, email, phone)  VALUES ("Henry", "Hondureño", "man", "student", "tot@hotmail.com", "0000000000");
+
+
+
+ CREATE TABLE fotos(
+   id int NOT NULL AUTO_INCREMENT,
+   photo varchar(100)DEFAULT "default.pjg",
+   PRIMARY KEY (ID)
+ );
+
+ /*  Execute this file from the command line by typing:
+  *    mysql -u root -p < schema.sql
+  *  to create the database and the tables.*/
+  INSERT INTO fotos ( photo)  VALUES ("" );
