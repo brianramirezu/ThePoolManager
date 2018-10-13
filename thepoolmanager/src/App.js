@@ -2,25 +2,24 @@ import React, { Component } from 'react';
 import style from "./style.css"
 import HeaderBar from "./components/header.jsx"
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import { browserHistory } from 'react-router';
+import { browserHistory } from '@version/react-router-v3';
 import Home from "./home.jsx"
 import Events from "./components/events.jsx"
-//import FooterPage from "./footer.jsx"
 import About from "./components/about.jsx";
 import Calendar from "./components/calendar.jsx"
 import BookAVisit from "./components/bookAVisist.jsx"
 import Contacts from "./components/contacts.jsx"
 import FooterPage from "./components/footer.jsx"
-import SignIn from './components/SignIn.jsx'
-import SignUp from './components/SignUp.jsx'
 import { firebaseApp }  from './firebase';
+import home from './home.jsx';
+import Routes from './Routes.jsx';
 
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user){
     console.log('user has signed in or up', user);
     browserHistory.push('/home');
   }else{
-    console.log('user has signed out or still need to sign in');
+    console.log('user has signed out or still needs to sign in');
     browserHistory.replace('/SignIn');
   }
 })
@@ -29,16 +28,15 @@ class App extends Component {
    return (
      <BrowserRouter>
      <div>
+       <Routes />
        <HeaderBar />
        <Switch>
-         <Route path="/home" component={Home} />
+         <Route path="/home" component={home} />
          <Route path="/about" component={About} />
          <Route path="/events" component={Events} />
          <Route path="/calendar" component={Calendar} />
          <Route path="/bookAVisit" component={BookAVisit} />
          <Route path="/contacts" component={Contacts} />
-         <Route exact path ='/' component={SignIn} />
-         <Route path ='/SignUp' component={SignUp} />
        </Switch>
        <FooterPage />
      </div>
