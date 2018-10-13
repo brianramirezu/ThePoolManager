@@ -14,7 +14,7 @@ return (
       <a className="navbar-brand" href="#"></a>
     </div>
     <ul className="nav navbar-nav">
-      <li className="active"><a href="src/home.jsx">Home</a></li>
+        <li><NavLink to ="/home">home</NavLink></li>
       <li className="dropdown"><a className="dropdown-toggle" data-toggle="dropdown" href="#">More Info <span className="caret"></span></a>
         <ul className="dropdown-menu">
           <li><NavLink to ="/about">About</NavLink></li>
