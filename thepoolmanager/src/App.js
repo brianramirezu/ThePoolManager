@@ -12,7 +12,8 @@ import Contacts from "./components/contacts.jsx"
 import FooterPage from "./components/footer.jsx"
 import { firebaseApp }  from './firebase';
 import home from './home.jsx';
-import Routes from './Routes.jsx';
+import SignIn from './components/SignIn.jsx'
+import SignUp from './components/SignUp.jsx'
 
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user){
@@ -28,9 +29,10 @@ class App extends Component {
    return (
      <BrowserRouter>
      <div>
-       <Routes />
        <HeaderBar />
        <Switch>
+         <Route exact path ='/' component={SignIn} />
+         <Route path ='/SignUp' component={SignUp} />
          <Route path="/home" component={home} />
          <Route path="/about" component={About} />
          <Route path="/events" component={Events} />
