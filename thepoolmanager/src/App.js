@@ -16,34 +16,34 @@ import SignIn from './components/SignIn.jsx'
 import SignUp from './components/SignUp.jsx'
 
 firebaseApp.auth().onAuthStateChanged(user => {
-  if (user){
-    console.log('user has signed in or up', user);
-    browserHistory.push('/home');
-  }else{
-    console.log('user has signed out or still needs to sign in');
-    browserHistory.replace('/SignIn');
-  }
+ if (user){
+   console.log('user has signed in or up', user);
+   browserHistory.push('/home');
+ }else{
+   console.log('user has signed out or still needs to sign in');
+   browserHistory.replace('/SignIn');
+ }
 })
 class App extends Component {
- render() {
-   return (
-     <BrowserRouter>
-     <div>
-       <HeaderBar />
-       <Switch>
-         <Route exact path ='/' component={SignIn} />
-         <Route path ='/SignUp' component={SignUp} />
-         <Route path="/home" component={home} />
-         <Route path="/about" component={About} />
-         <Route path="/events" component={Events} />
-         <Route path="/calendar" component={Calendar} />
-         <Route path="/bookAVisit" component={BookAVisit} />
-         <Route path="/contacts" component={Contacts} />
-       </Switch>
-       <FooterPage />
-     </div>
-   </BrowserRouter>
- );
+render() {
+  return (
+    <BrowserRouter>
+    <div>
+      <HeaderBar />
+      <Switch>
+        <Route exact path ='/' component={SignIn} />
+        <Route path ='/SignUp' component={SignUp} />
+        <Route path="/home" component={home} />
+        <Route path="/about" component={About} />
+        <Route path="/events" component={Events} />
+        <Route path="/calendar" component={Calendar} />
+        <Route path="/bookAVisit" component={BookAVisit} />
+        <Route path="/contacts" component={Contacts} />
+      </Switch>
+      <FooterPage />
+    </div>
+  </BrowserRouter>
+);
 }
 }
 

@@ -1,22 +1,16 @@
 import React from "react"
 import {NavLink}  from 'react-router-dom';
-
-
-
-
-
-
 const Contacts = () => {
- return (
+  return (
 
- <div>
+  <div>
 
- <h1>Contacts</h1>
+  <h1><strong>Contacts</strong></h1>
 
- </div>
+  </div>
 
- );
+  );
 }
 
 
-export default Contacts;
+ export default Contacts;

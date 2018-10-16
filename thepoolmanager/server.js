@@ -7,18 +7,18 @@ const insertOne = require("db/index.js")
 
 // Create connection
 const db = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'holacode',
-    database : 'nodemysql'
+   host     : 'localhost',
+   user     : 'root',
+   password : 'holacode',
+   database : 'nodemysql'
 });
 
 // Connect
 db.connect((err) => {
-    if(err){
-        throw err;
-          console.log('MySql Connected...');
-    }
+   if(err){
+       throw err;
+         console.log('MySql Connected...');
+   }
 });
 
 const app = express();
@@ -56,22 +56,22 @@ const app = express();
 // })
 
 app.post('/nodemysql', function(req, res){
-  var photo= req.body.photo
+ var photo= req.body.photo
 
 
-  if(!name){
-    console.log('post request error');
-    res.sendStatus(400);
-  }else {
-    database.insertOne( photo, (err, results) =>{
-      if(err){
-        console.log('error in insertOne()');
-        res.sendStatus(500)
-      } else {
-        res.status(200).json(results)
-      }
-    })
-  }
+ if(!name){
+   console.log('post request error');
+   res.sendStatus(400);
+ }else {
+   database.insertOne( photo, (err, results) =>{
+     if(err){
+       console.log('error in insertOne()');
+       res.sendStatus(500)
+     } else {
+       res.status(200).json(results)
+     }
+   })
+ }
 })
 
 
@@ -116,5 +116,5 @@ app.post('/nodemysql', function(req, res){
 
 
 app.listen('3001', () => {
-    console.log('Server started on port 8000');
+   console.log('Server started on port 8000');
 });

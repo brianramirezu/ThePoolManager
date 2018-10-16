@@ -6,25 +6,25 @@ import { firebaseApp } from './firebase';
 class Home extends Component {
 
 signOut() {
-  firebaseApp.auth().signOut();
+ firebaseApp.auth().signOut();
 }
 
-  render() {
-    return (
-      <div>
-      hello
-      <button
-        className='btn btn-danger'
-        onClick={() => this.signOut()}
+ render() {
+   return (
+     <div>
+     hello
+     <button
+       className='btn btn-danger'
+       onClick={() => this.signOut()}
 
-        >
-        Sign Out
-      </button>
+       >
+       Sign Out
+     </button>
 
-      </div>
+     </div>
 
-    );
-  }
+   );
+ }
 }
 
 export default Home;
