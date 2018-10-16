@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import style from "./style.css"
-import CarouselMenu from "./components/Carousel.jsx";
-
+import { firebaseApp } from './firebase';
 
 
 class Home extends Component {
-  render() {
-    return (
-      <div>
-      <h1>hello</h1>
-      <CarouselMenu />
-      </div>
 
-    );
-  }
+signOut() {
+ firebaseApp.auth().signOut();
+}
+
+ render() {
+   return (
+     <div>
+     hello
+     <button
+       className='btn btn-danger'
+       onClick={() => this.signOut()}
+
+       >
+       Sign Out
+     </button>
+
+     </div>
+
+   );
+ }
 }
 
 export default Home;

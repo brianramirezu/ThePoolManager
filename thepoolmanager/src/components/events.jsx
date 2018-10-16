@@ -1,20 +1,4 @@
-/*import React from "react"
-import {NavLink}  from 'react-router-dom';
-import Calendar from "./calendar.jsx"
-
-const Events = () => {
-  return (
-    <div>
-  <h1>events from calendar</h1>
-   </div>
-  );
-}
-
-
-export default Events;*/
-// ======================== //
-
-
+import firebase from "firebase";
 import React from 'react';
 import {NavLink}  from 'react-router-dom';
 import Calendar from "./calendar.jsx"
@@ -33,7 +17,7 @@ export default class Example extends React.Component {
         <FormGroup row>
           <Label for="examplePassword" sm={2}>Password</Label>
           <Col sm={15}>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            <Input type="text" name="password" id="examplePassword" placeholder="password placeholder" />
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -45,7 +29,7 @@ export default class Example extends React.Component {
         <FormGroup row>
           <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
           <Col sm={10}>
-            <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple />
+            <Input type="text" name="selectMulti" id="exampleSelectMulti" multiple />
           </Col>
         </FormGroup>
       {/*  <FormGroup row>
