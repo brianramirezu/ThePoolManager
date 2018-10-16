@@ -14,6 +14,7 @@ import { firebaseApp }  from './firebase';
 import home from './home.jsx';
 import SignIn from './components/SignIn.jsx'
 import SignUp from './components/SignUp.jsx'
+import { Carousel } from 'react-responsive-carousel'
 
 firebaseApp.auth().onAuthStateChanged(user => {
  if (user){

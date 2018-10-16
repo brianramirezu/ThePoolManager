@@ -48,7 +48,7 @@ class CarouselMenu extends React.Component {
          <img src='https://i.pinimg.com/736x/d4/04/45/d40445dd63de4b2d59addaa1f103db3d--milanesa-empanizada-key-ingredient.jpg'/>
          <img src='https://i.pinimg.com/736x/0f/10/d5/0f10d5b70685b8cb1cbec2197f861fed--ceviche-mexican-tilapia-ceviche.jpg'/>
          <img src='https://media-cdn.tripadvisor.com/media/photo-s/0b/f3/80/18/famous-bbq-ribs.jpg'/>
-         <img src='src/componets/BG Image.jpeg'/>
+         <img src='src/componets/BGImage.jpg'/>
        </Coverflow>
       </div>
 
