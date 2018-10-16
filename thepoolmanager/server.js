@@ -49,8 +49,6 @@ app.post('/notmultiple', imagesUpload(
 ));
 
 
-
-
 app.listen('8000', () => {
     console.log('Server started on port 3000');
 });

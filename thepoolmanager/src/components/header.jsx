@@ -32,6 +32,7 @@ const HeaderBar = () => {
    </div>
  </nav>
    </div>
+   
    )
  }
  export default HeaderBar;

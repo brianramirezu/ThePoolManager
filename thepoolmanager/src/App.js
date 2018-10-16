@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import style from "./style.css"
 import HeaderBar from "./components/header.jsx"
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from "./home.jsx"
 import Events from "./components/events.jsx"
-//import FooterPage from "./footer.jsx"
 import About from "./components/about.jsx";
-import Calendar from "./components/calendar.jsx"
-import BookAVisit from "./components/bookAVisist.jsx"
-import Contacts from "./components/contacts.jsx"
-import FooterPage from "./components/footer.jsx"
+import Calendar from "./components/calendar.jsx";
+import BookAVisit from "./components/bookAVisist.jsx";
+import Contacts from "./components/contacts.jsx";
+import FooterPage from "./components/footer.jsx";
 
 class App extends Component {
  render() {
