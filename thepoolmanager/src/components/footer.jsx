@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Footer } from 'mdbreact';
+import style from "../style.css" 
 
 class FooterPage extends React.Component {
     render(){
