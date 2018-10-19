@@ -65,7 +65,7 @@ app.post('/sendMessage', function(req, res){
     console.log('post request error');
     res.sendStatus(400);
   }else {
-    database.insertOne(name, description, category, comments, email, phone, photo, (err, results) =>{
+    db.insertOne(name, description, category, comments, email, phone, photo, (err, results) =>{
       if(err){
         console.log('error in insertOne()');
         res.sendStatus(500)
@@ -75,7 +75,22 @@ app.post('/sendMessage', function(req, res){
     })
   }
 })
+app.post("/booking",function(req,res){
+  var company = req.body.company
+  var name = req.body.name
+  var reason = req.body.reason
+  var hour = req.body.hour
+  var time = req.body.time
 
+  db.insertBooking(company,name,reason,hour,time, (err,results) =>{
+  if(err){
+      res.sendStatus(500)
+    } else {
+      res.status(200).json(results)
+    }
+
+  })
+});
 
 // var runQuery = function(Query,Data,callback){
 //    var connection = mysql.createConnection(dbConfig);
@@ -119,6 +134,4 @@ app.post('/sendMessage', function(req, res){
 app.listen('3001', () => {
     console.log('Server started on port 8000');
 });
-
-
-  export default db;
+// export default db;

@@ -24,4 +24,15 @@ var insertOne= function(name, description, category, comments, email, phone, pho
 )
 }
 
+ var insertBooking = function (company,name,reason,hour,date, callback) {
+   connection.query("INSERT INTO booking(company,name,reason,hour,date ) VALUES (?,?,?,?,?) ",
+   [company,name,reason,hour,date], (err,results)=>{
+     if(err)
+     callback(err,null)
+   }else {
+     callback(null,results)
+   }
+}
+
 module.exports.insertOne = insertOne
+module.exports.insertBooking = insertBooking

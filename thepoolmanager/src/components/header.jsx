@@ -20,7 +20,7 @@ const HeaderBar = () => {
            <li><NavLink to ="/about">About</NavLink></li>
            <li><NavLink to ="/events">Events</NavLink></li>
            <li><NavLink to ="/calendar">Calendar</NavLink></li>
-           <li><NavLink to ="/bookAVisit">BookAVisit</NavLink></li>
+           <li><NavLink to ="/booking">Booking Sytem</NavLink></li>
          </ul>
        </li>
        <li><NavLink to ="/contacts">Contacts</NavLink></li>

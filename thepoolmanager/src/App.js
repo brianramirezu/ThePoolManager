@@ -4,10 +4,9 @@ import HeaderBar from "./components/header.jsx"
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from "./home.jsx"
 import Events from "./components/events.jsx"
-//import FooterPage from "./footer.jsx"
+import Booking from "./components/bookingSystem.jsx";
 import About from "./components/about.jsx";
 import Calendar from "./components/calendar.jsx"
-import BookAVisit from "./components/bookAVisist.jsx"
 import Contacts from "./components/contacts.jsx"
 import FooterPage from "./components/footer.jsx"
 import SignIn from './components/SignIn.jsx'
@@ -32,7 +31,7 @@ class App extends Component {
          <Route path="/about" component={About} />
          <Route path="/events" component={Events} />
          <Route path="/calendar" component={Calendar} />
-         <Route path="/bookAVisit" component={BookAVisit} />
+         <Route path="/booking" component={Booking} />
          <Route path="/contacts" component={Contacts} />
          <Route exact path ='/' component={SignIn} />
          <Route path ='/SignUp' component={SignUp} />
