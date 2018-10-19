@@ -40,6 +40,23 @@ app.post('/nodemysql', function(req, res){
  }
 })
 
+app.post("/booking",function(req,res){
+ var company = req.body.company
+ var name = req.body.name
+ var reason = req.body.reason
+ var hour = req.body.hour
+ var time = req.body.time
+
+ db.insertBooking(company,name,reason,hour,time, (err,results) =>{
+ if(err){
+     res.sendStatus(500)
+   } else {
+     res.status(200).json(results)
+   }
+
+ })
+});
+
 app.listen('3001', () => {
    console.log('Server started on port 3001');
 });

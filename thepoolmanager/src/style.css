@@ -76,3 +76,30 @@ background-color: #ff0000; /* Green */
     height: 120px;
     border: 3px solid green;
 }
+iframe {
+ height: 60vw;
+ width: 40vw;
+
+
+}
+
+.calendario{
+ position: absolute;
+ left: 1000px;
+color:#0F8EB3;
+display: block;
+  margin: 4px;
+  padding: 5px;
+  min-height: 100px;
+  border: 1px solid #eebb55;
+  border-radius: 7pt;
+  background: #ffeebb;
+}
+
+.img{
+ position: absolute;
+
+ left: 600px;
+
+
+}
