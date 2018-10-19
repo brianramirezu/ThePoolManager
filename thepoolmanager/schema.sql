@@ -46,3 +46,14 @@ CREATE TABLE events(
   );
 
   INSERT INTO eventform (name, activity, dayinfo, inviteType) VALUES ('Hola code', 'pizza parties', 'oct 16 2018', 'open');
+
+  CREATE TABLE booking(
+  id int NOT NULL AUTO_INCREMENT,
+  company varchar(50) NOT NULL,
+  name varchar(50) NOT NULL,
+  reason varchar(50) NOT NULL,
+  hour varchar(50) NOT NULL,
+  date varchar(50) NOT NULL,
+  PRIMARY KEY (ID)
+);
+INSERT INTO booking (company,name,reason,hour,date) VALUES ("Holacode","B","Meeting","12:30","11-2-18");

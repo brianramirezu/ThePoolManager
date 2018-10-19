@@ -5,7 +5,7 @@ import Home from "./home.jsx"
 import Events from "./components/events.jsx"
 import About from "./components/about.jsx";
 import Calendar from "./components/calendar.jsx"
-import BookAVisit from "./components/bookAVisist.jsx"
+import bookingSystem from "./components/bookingSystem.jsx"
 import Contacts from "./components/contacts.jsx"
 import FooterPage from "./components/footer.jsx"
 import { firebaseApp }  from './firebase';
@@ -66,7 +66,7 @@ render() {
         <Route path="/about" component={About} />
         <Route path="/events" component={Events} />
         <Route path="/calendar" component={Calendar} />
-        <Route path="/bookAVisit" component={BookAVisit} />
+        <Route path="/bookAVisit" component={bookingSystem} />
         <Route path="/contacts" component={Contacts} />
         <Route path="/uploader" component={imageUploader} />
         <Route path="/form" component={exampleForm} />
