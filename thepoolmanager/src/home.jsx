@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import style from "./style.css"
 import { firebaseApp } from './firebase';
+import style from './style.css';
 
 
-class Home extends Component {
+
+class Home extends React.Component {
 
 signOut() {
  firebaseApp.auth().signOut();
+ this.props.signOutChangedState();
+ this.props.history.push('/');
 }
 
  render() {
    return (
      <div>
-     <h1><strong>HOME PAGE</strong></h1>
      <button
-
-       className='btn btn-danger'
+       className='danger'
        onClick={() => this.signOut()}
 
        >

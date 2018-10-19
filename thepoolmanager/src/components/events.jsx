@@ -1,84 +1,42 @@
-import firebase from "firebase";
 import React from 'react';
-import {NavLink}  from 'react-router-dom';
-import Calendar from "./calendar.jsx"
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default class Example extends React.Component {
   render() {
     return (
       <Form>
         <FormGroup row>
-          <Label for="exampleEmail" sm={2}>Email</Label>
-          <Col sm={15}>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          <Label for="nameCompany" sm={2}>Name/Company Name</Label>
+          <Col sm={5}>
+            <Input type="text" name="nameOf" id="nameCompany" placeholder="Enter your name or name of the company" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="examplePassword" sm={2}>Password</Label>
-          <Col sm={15}>
-            <Input type="text" name="password" id="examplePassword" placeholder="password placeholder" />
+          <Label for="activityEvent" sm={2}>Name of activity</Label>
+          <Col sm={5}>
+            <Input type="text" name="activity" id="activityEvent" placeholder="Please enter the name of activity" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleSelect" sm={2}>Select</Label>
-          <Col sm={10 }>
-            <Input type="select" name="select" id="exampleSelect" />
+          <Label for="activityDetail" sm={2}>Detail of activity</Label>
+          <Col sm={5}>
+            <Input type="text" name="activityDetail" id="activityDetail" placeholder="Please enter short description of the activity" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
-          <Col sm={10}>
-            <Input type="text" name="selectMulti" id="exampleSelectMulti" multiple />
-          </Col>
-        </FormGroup>
-      {/*  <FormGroup row>
-          <Label for="exampleText" sm={2}>Text Area</Label>
-          <Col sm={10}>
-            <Input type="textarea" name="text" id="exampleText" />
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleFile" sm={2}>File</Label>
-          <Col sm={10}>
-            <Input type="file" name="file" id="exampleFile" />
-            <FormText color="radio">
-              This is some placeholder block-level help text for the above input.
-              It's a bit lighter and easily wraps to a new line.
-            </FormText>
-          </Col>
-        </FormGroup>
-        <FormGroup tag="fieldset" row>
-          <legend className="col-form-label col-sm-2">Radio Buttons</legend>
-          <Col sm={10}>
-          <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                Option one is this and that—be sure to include why it's great
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                Option two can be something else and selecting it will deselect option one
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" disabled />{' '}
-                Option three option
-              </Label>
-            </FormGroup>
-          </Col>
-        </FormGroup>*/}
-        <FormGroup row>
-          <Label for="checkbox2" sm={2}></Label>
-          <Col sm={{ size: 10 }}>
-            <FormGroup check>
+          <Label for="inviteType" sm={2}>Invite Type</Label>
+          <Col sm={5}>
+            <Input type="text" name="inviteTypePick" id="inviteTypePick" placeholder="Enter the type of invitation" />
 
-            </FormGroup>
           </Col>
         </FormGroup>
+        <FormGroup row>
+          <Label for="exampleSelectMulti" sm={2}>Date and Time of event</Label>
+          <Col sm={5}>
+            <Input type="text" name="selectMulti" id="exampleSelectMulti" multiple placeholder="Enter date and time" />
+          </Col>
+        </FormGroup>
+
       <FormGroup check row>
           <Col sm={{ size: 20, offset: 3 }}>
             <Button><strong><big>Submit</big></strong></Button>

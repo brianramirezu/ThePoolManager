@@ -12,15 +12,12 @@ class SignIn extends React.Component{
         message:''
       }
     }
-  }
+    }
 
-  signIn() {
-    console.log('this.state', this.state);
+  triggerSignIn() {
     const {email, password } = this.state;
-    firebaseApp.auth().signInWithEmailAndPassword(email, password)
-      .catch(error => {
-        this.setState({error})
-      })
+    this.props.signIn(email, password)
+    this.props.history.push('/home');
   }
 
   render(){
@@ -45,7 +42,7 @@ class SignIn extends React.Component{
            <button
              className='btn btn-primary'
              type='button'
-             onClick={() => this.signIn()}
+             onClick={() => this.triggerSignIn()}
              >
              Sign In
            </button>

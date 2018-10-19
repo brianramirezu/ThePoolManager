@@ -34,3 +34,15 @@ CREATE TABLE events(
   *    mysql -u root -p < schema.sql
   *  to create the database and the tables.*/
   INSERT INTO fotos ( photo)  VALUES ("" );
+
+
+  CREATE TABLE eventform(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(50)NOT NULL,
+    activity varchar(50)NOT NULL,
+    dayinfo varchar(50)NOT NULL,
+    inviteType varchar(50)NOT NULL,o
+    PRIMARY KEY (ID)
+  );
+
+  INSERT INTO eventform (name, activity, dayinfo, inviteType) VALUES ('Hola code', 'pizza parties', 'oct 16 2018', 'open');
