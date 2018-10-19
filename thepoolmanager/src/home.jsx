@@ -12,8 +12,9 @@ signOut() {
  render() {
    return (
      <div>
-     hello
+     <h1><strong>HOME PAGE</strong></h1>
      <button
+
        className='btn btn-danger'
        onClick={() => this.signOut()}
 

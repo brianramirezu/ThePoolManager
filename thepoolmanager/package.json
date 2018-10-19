@@ -26,6 +26,7 @@
     "react-images-upload": "^1.2.3",
     "react-images-uploader": "^1.2.0-rc1",
     "react-progress-button": "^5.1.0",
+    "react-responsive-carousel": "^3.1.43",
     "react-responsive-modal": "^3.4.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",

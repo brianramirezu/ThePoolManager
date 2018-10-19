@@ -15,6 +15,7 @@ import home from './home.jsx';
 import SignIn from './components/SignIn.jsx'
 import SignUp from './components/SignUp.jsx'
 import { Carousel } from 'react-responsive-carousel'
+import CarouselMenu from "./components/Carousel.jsx"
 
 firebaseApp.auth().onAuthStateChanged(user => {
  if (user){
@@ -31,6 +32,7 @@ render() {
     <BrowserRouter>
     <div>
       <HeaderBar />
+      <CarouselMenu />
       <Switch>
         <Route exact path ='/' component={SignIn} />
         <Route path ='/SignUp' component={SignUp} />
