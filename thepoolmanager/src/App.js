@@ -74,8 +74,8 @@ render() {
       <FooterPage />
     </div>
   </BrowserRouter>
-);
-}
+  );
+ }
 }
 
 
